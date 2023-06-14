@@ -1,6 +1,5 @@
-# Getting Started with Create React App
+# This project created by react with hooks name [ TECH BLOG ]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
