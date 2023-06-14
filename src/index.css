@@ -60,22 +60,26 @@ code {
   color: darkgray;
   font-size: 20px;
   font-weight: 700;
+  box-shadow: 3px 3px 4px black;
+  height: 3rem;
+  border-radius: 3px;
+  background-color: rgb(231, 243, 187);
 }
 #nav li {
   margin-left: 15px;
 }
 #nav li a {
   text-decoration: none;
-  color: darkgray;
+  color: rgb(34, 53, 194);
   padding: 3px;
 }
 #nav li a:hover {
-  background-color: blue;
+  background-color: rgb(154, 212, 37);
   border-radius: 3px;
   color: white;
 }
 .active {
-  background-color: blue;
+  background-color: rgb(154, 212, 37);
   border-radius: 3px;
   color: white;
 }
