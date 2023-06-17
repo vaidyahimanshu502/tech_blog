@@ -3,6 +3,20 @@ import React from 'react';
 import { fireBase } from '../firebase';
 import { useFormInput } from './hooks'
 
+// going to apply DYNAMIC STYLING
+import {  css, styled } from 'styled-components';
+
+const StyledButton = styled.button`
+    height: 33px;
+    background: ${(props) => props.primary ? '#4caf50' : 'blue'}; 
+    border: 1px solid red;
+    color: #fff;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+`;
+
 export default function CreatePost() {
     
     // const [title, setTitle] = useState(' ');
@@ -37,19 +51,19 @@ export default function CreatePost() {
              <label>Title:</label>
              {/* <input value={title} onChange={(e) => setTitle(e.target.value)} /> */}
              {/* {console.log('Title', title)} */}
-             <input {...title} />
+             <input {...title} required/>
            </div>
            <div className='form-field'>
              <label>Sub-Title:</label>
              {/* <input value={subTitle} onChange={(e) => setSubTitle(e.target.value)} /> */}
-             <input {...subTitle} />
+             <input {...subTitle} readOnly/>
            </div>
            <div className='form-field'>
              <label>Content:</label>
              {/* <textarea value={content} onChange={(e) => setContent(e.target.value)} ></textarea> */}
-             <textarea {...content}></textarea>
+             <textarea {...content} readOnly></textarea>
            </div>
-           <button className='create-post-btn'>Create Post</button>
+           <StyledButton primary>Create Post</StyledButton>
         </form>
     </div>
   )
